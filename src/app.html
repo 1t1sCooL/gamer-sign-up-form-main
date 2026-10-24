@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="dark" />
+		<meta name="theme-color" content="#04070a" />
+		<meta
+			name="description"
+			content="Sign up for NEONCORE, a competitive-gaming network. A pixel-perfect Frontend Mentor challenge built with SvelteKit."
+		/>
+
+		<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32x32.png" />
+
+		<!-- Preload the two variable weights that render the bulk of visible text to avoid font-swap layout shift -->
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/orbitron-variable.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/jetbrains-mono-variable.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+
+		<style>
+			/* font-display: optional kills the post-paint swap/reflow (see font-display standard). */
+			@font-face {
+				font-family: 'Orbitron';
+				src: url('%sveltekit.assets%/fonts/orbitron-variable.ttf') format('truetype-variations');
+				font-weight: 100 900;
+				font-style: normal;
+				font-display: optional;
+			}
+			@font-face {
+				font-family: 'JetBrains Mono';
+				src: url('%sveltekit.assets%/fonts/jetbrains-mono-variable.ttf')
+					format('truetype-variations');
+				font-weight: 100 800;
+				font-style: normal;
+				font-display: optional;
+			}
+		</style>
+
+		<title>Frontend Mentor | Gamer sign-up form</title>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
