@@ -22,12 +22,12 @@ export default defineConfig({
 
 			// Terms / Privacy Policy / Log in are placeholder anchors with no page in
 			// this challenge — don't fail the prerender over their missing targets.
-			prerender: { handleMissingId: 'ignore' }
+			prerender: { handleMissingId: 'ignore' },
 
-			// Deploy branch only: serve the app from mmalabugin.ru/GamerSignUpForm/.
+			// Deploy branch: serve the app from mmalabugin.ru/GamerSignUpForm/.
 			// Absolute base paths are robust under a sub-path; on main this stays
 			// COMMENTED so the default relative paths serve Vercel from the root.
-			// paths: { base: '/GamerSignUpForm', relative: false }
+			paths: { base: '/GamerSignUpForm', relative: false }
 		})
 	]
 });
